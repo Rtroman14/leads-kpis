@@ -79,7 +79,7 @@ export default function ClientTable({ leads = [] }) {
                                 {lead.numResponse}
                                 <span className="text-xs text-muted-foreground">
                                     {"  "}
-                                    {(lead.numResponse / lead.numContacts).toFixed(2)}%
+                                    {((lead.numResponse / lead.numContacts) * 100).toFixed(2)}%
                                 </span>
                             </TableCell>
                             <TableCell>
@@ -87,7 +87,7 @@ export default function ClientTable({ leads = [] }) {
 
                                 <span className="text-xs text-muted-foreground">
                                     {"  "}
-                                    {(lead.numHotLeads / lead.numResponse).toFixed(2)}%
+                                    {((lead.numHotLeads / lead.numResponse) * 100).toFixed(2)}%
                                 </span>
                             </TableCell>
                         </TableRow>
@@ -102,7 +102,7 @@ export default function ClientTable({ leads = [] }) {
 
                                 <span className="text-xs text-muted-foreground">
                                     {"  "}
-                                    {(totals.numResponse / totals.numContacts).toFixed(2)}%
+                                    {((totals.numResponse / totals.numContacts) * 100).toFixed(2)}%
                                 </span>
                             </TableCell>
                             <TableCell>
@@ -110,7 +110,7 @@ export default function ClientTable({ leads = [] }) {
 
                                 <span className="text-xs text-muted-foreground">
                                     {"  "}
-                                    {(totals.numHotLeads / totals.numResponse).toFixed(2)}%
+                                    {((totals.numHotLeads / totals.numResponse) * 100).toFixed(2)}%
                                 </span>
                             </TableCell>
                         </TableRow>
